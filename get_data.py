@@ -4,7 +4,7 @@ import pandas as pd
 from dash_table.Format import Format, Group, Scheme, Symbol
 
 def get_main_table(display,form_type, start_date, end_date):
-    engine2 = sqlalchemy.create_engine("postgresql://postgres:ahrsDFW34sw@localhost:5432/Dashboards", pool_pre_ping=True)
+    engine2 = sqlalchemy.create_engine("", pool_pre_ping=True)
     not_filed_id = {'f': "('151.1353','151.1354','151.1357','151.1360','153.1394','153.1395','153.1396','153.1397','153.1398')",
     'h':"('195.1682','195.1687','195.1688','195.1692','195.1694','167.1494','167.1499','167.1500','167.1501','167.1502')",
     'g':"('158.1419','158.1420','158.1421','158.1422','158.1423','158.1424','158.1428','158.1430','160.1483','160.1484','160.1485','160.1488','160.1489')",
@@ -95,8 +95,8 @@ def get_main_table(display,form_type, start_date, end_date):
         return data
 
 def get_engine():
-    engine = sqlalchemy.create_engine("mssql+pyodbc://ads.otlnal.ru/OtlNalWork?driver=ODBC+Driver+17+for+SQL+Server?trusted_connection=yes", pool_pre_ping=True)
-    engine2 = sqlalchemy.create_engine("postgresql://postgres:ahrsDFW34sw@localhost:5432/Dashboards", pool_pre_ping=True)
+    engine = sqlalchemy.create_engine("", pool_pre_ping=True)
+    engine2 = sqlalchemy.create_engine("", pool_pre_ping=True)
     return engine, engine2
 
 def rename_table(data):
@@ -129,7 +129,7 @@ def get_data_table():
     return data
 
 def get_data_funnel(form_type, start_date, end_date):
-    engine2 = sqlalchemy.create_engine("postgresql://postgres:ahrsDFW34sw@localhost:5432/Dashboards", pool_pre_ping=True)
+    engine2 = sqlalchemy.create_engine("", pool_pre_ping=True)
     not_filed_id = {'f': "('151.1353','151.1354','151.1357','151.1360','153.1394','153.1395','153.1396','153.1397','153.1398')",
     'h':"('195.1682','195.1687','195.1688','195.1692','195.1694','167.1494','167.1499','167.1500','167.1501','167.1502')",
     'g':"('158.1419','158.1420','158.1421','158.1422','158.1423','158.1424','158.1428','158.1430','160.1483','160.1484','160.1485','160.1488','160.1489')",
